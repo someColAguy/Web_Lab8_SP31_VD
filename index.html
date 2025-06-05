@@ -1,0 +1,243 @@
+<!-- Головна сторінка з логотипами ТНТУ, ФІС/КН та рекламними блоками -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>TechVlad - Технології і Техніка</title>
+    <link rel="stylesheet" href="main_style.css">
+    <style>
+        .finance-widget-container {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .finance-widget-container h3 {
+            margin-top: 0;
+            color: #003366;
+        }
+        .tradingview-widget-container {
+            height: 220px; /* Можна налаштувати висоту */
+            margin-bottom:10px;
+        }
+        #wall-street-time {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        #booked-widget-6037cyluz5d {
+            max-width: 200px;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            padding: 1px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="logos">
+                <img src="images/tntu_logo.png" alt="Логотип ТНТУ" class="logo">
+                <img src="images/Logotip FIS.jpg" alt="Логотип ФІС" class="logo">
+                <img src="images/Logotip-KN-povnij.jpg" alt="Логотип КН" class="logo">
+            </div>
+            <h1>TechVlad</h1>
+            <nav class="nav-bar">
+                <a href="index.html">Головна</a>
+                <a href="Biography.html">Про мене</a>
+                <a href="Tech.html">Технології</a>
+                <a href="Hardware.html">Техніка</a>
+                <a href="Interesting.html">Цікаве</a>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section class="intro">
+                <h2>Ласкаво просимо!</h2>
+                <p>Я Владислав Духній, ентузіаст техніки та новітніх технологій. 
+                    На цьому сайті ви знайдете цікаві статті, огляди гаджетів, 
+                    поради з програмування та багато іншого.</p>
+            </section>
+
+            <section class="featured">
+                <article class="card">
+                    <img src="images/tech.jpg" alt="Технології" class="card-image">
+                    <h3>Новітні технології</h3>
+                    <p>Дослідження ШІ, хмарних обчислень і програмування.</p>
+                    <a href="Tech.html">Детальніше</a>
+                </article>
+
+                <article class="card">
+                    <img src="images/hardware.jpg" alt="Техніка" class="card-image">
+                    <h3>Техніка</h3>
+                    <p>Огляди старої і нової електроніки, DIY проекти.</p>
+                    <a href="Hardware.html">Детальніше</a>
+                </article>
+
+                <article class="card">
+                    <img src="images/curiosities.jpg" alt="Цікаве" class="card-image">
+                    <h3>Цікаві факти</h3>
+                    <p>Неймовірні технологічні факти і історії з життя пристроїв.</p>
+                    <a href="Interesting.html">Детальніше</a>
+                </article>
+            </section>
+
+            <aside class="right-ad-block">
+                <div id="booked-widget-6037cyluz5d"><a href="https://hotelmix.com.ua/weather/kyiv-18881">Київ</a></div>
+                <img src="images/eldenAd.png" alt="Реклама Elden Ring" class="ad-sidebar">
+                <section id="financial-widgets-section">
+        <h2>Фінансова інформація</h2>
+
+        <div class="finance-widget-container">
+            <h3>Час в Нью-Йорку (Wall Street)</h3>
+            <p id="wall-street-time">-</p>
+        </div>
+
+        <div class="finance-widget-container" id="currency-rates-mono">
+            <h3>Курси валют (Monobank)</h3>
+            <p>USD/UAH: <span id="mono-usd-rate">-</span></p>
+            <p>EUR/UAH: <span id="mono-eur-rate">-</span></p>
+        </div>
+
+        <div class="finance-widget-container">
+            <h3>S&P 500 Index</h3>
+            <div class="tradingview-widget-container">
+                <div id="tradingview_snp500"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                new TradingView.widget(
+                {
+                  "autosize": true,
+                  "symbol": "BITSTAMP:ETHUSD", // Ethereum
+                  "interval": "D",
+                  "timezone": "Etc/UTC",
+                  "theme": "light",
+                  "style": "1",
+                  "locale": "uk",
+                  "toolbar_bg": "#f1f3f6",
+                  "enable_publishing": false,
+                  "allow_symbol_change": true,
+                  "container_id": "tradingview_snp500"
+                }
+                );
+                </script>
+            </div>
+        </div>
+
+        <div class="finance-widget-container">
+            <h3>Bitcoin (BTC/USD)</h3>
+            <div class="tradingview-widget-container">
+                <div id="tradingview_bitcoin"></div>
+                <script type="text/javascript"> // tv.js вже завантажено вище
+                new TradingView.widget(
+                {
+                  "autosize": true,
+                  "symbol": "BITSTAMP:BTCUSD", // Bitcoin
+                  "interval": "D",
+                  "timezone": "Etc/UTC",
+                  "theme": "light",
+                  "style": "1",
+                  "locale": "uk",
+                  "toolbar_bg": "#f1f3f6",
+                  "enable_publishing": false,
+                  "allow_symbol_change": true,
+                  "container_id": "tradingview_bitcoin"
+                }
+                );
+                </script>
+            </div>
+        </div>
+
+        
+    </section>
+            </aside>
+        </main>
+
+        <footer class="footer">
+            <div class="ads">
+                <img src="images/adf1.png" alt="Реклама 1" class="ad-footer">
+                <img src="images/adf2.png" alt="Реклама 2" class="ad-footer">
+                <img src="images/adf3.png" alt="Реклама 3" class="ad-footer">
+            </div>
+            <p>&copy; 2025 Владислав Духній. Усі права захищено.</p>
+        </footer>
+    </div>
+    <script type="text/javascript"> (function() { const widgetUrl = encodeURIComponent(location.href); async function fetchWidgetData() { let WUrl = 'https://weather-widget.booked.net/api/template?&cityId=53963&id=simple5&langId=29&rand_id=6037cyluz5d'; WUrl += '&ref=' + widgetUrl; let response = await fetch(WUrl); if (!response.ok) { throw new Error(`HTTP error! Status: ${response.status}`); } const data = await response.json(); if (data.patternHTML) { document.getElementById("booked-widget-6037cyluz5d").innerHTML = data.patternHTML; } } fetchWidgetData(); })(); </script>
+<script>
+    // Функція для годинника Нью-Йорка
+    function updateWallStreetTime() {
+        const wallStreetTimeElement = document.getElementById('wall-street-time');
+        if (wallStreetTimeElement) {
+            const now = new Date();
+            wallStreetTimeElement.textContent = now.toLocaleTimeString('uk-UA', { 
+                timeZone: 'America/New_York', 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            });
+        }
+    }
+
+    // Функція для отримання курсів Monobank
+    async function fetchMonoCurrencyRates() {
+        const currencyApiUrl = 'https://api.monobank.ua/bank/currency';
+        const uahCode = 980;
+        const usdCode = 840;
+        const eurCode = 978;
+
+        const usdRateElement = document.getElementById('mono-usd-rate');
+        const eurRateElement = document.getElementById('mono-eur-rate');
+
+        try {
+            const response = await fetch(currencyApiUrl);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const rates = await response.json();
+
+            const usdToUah = rates.find(rate => rate.currencyCodeA === usdCode && rate.currencyCodeB === uahCode);
+            const eurToUah = rates.find(rate => rate.currencyCodeA === eurCode && rate.currencyCodeB === uahCode);
+
+            if (usdToUah && usdToUah.rateBuy && usdToUah.rateSell) {
+                usdRateElement.textContent = `Купівля: ${usdToUah.rateBuy.toFixed(2)}, Продаж: ${usdToUah.rateSell.toFixed(2)}`;
+            } else if (usdToUah && usdToUah.rateCross) { // Якщо є тільки крос-курс
+                 usdRateElement.textContent = `Крос: ${usdToUah.rateCross.toFixed(2)}`;
+            } else {
+                usdRateElement.textContent = 'Дані недоступні';
+            }
+
+            if (eurToUah && eurToUah.rateBuy && eurToUah.rateSell) {
+                eurRateElement.textContent = `Купівля: ${eurToUah.rateBuy.toFixed(2)}, Продаж: ${eurToUah.rateSell.toFixed(2)}`;
+            } else if (eurToUah && eurToUah.rateCross) {
+                eurRateElement.textContent = `Крос: ${eurToUah.rateCross.toFixed(2)}`;
+            } else {
+                eurRateElement.textContent = 'Дані недоступні';
+            }
+
+        } catch (error) {
+            console.error('Помилка отримання курсів Monobank:', error);
+            if(usdRateElement) usdRateElement.textContent = 'Помилка завантаження';
+            if(eurRateElement) eurRateElement.textContent = 'Помилка завантаження';
+        }
+    }
+
+    // Ініціалізація та оновлення
+    document.addEventListener('DOMContentLoaded', () => {
+        // Годинник
+        updateWallStreetTime();
+        setInterval(updateWallStreetTime, 1000); // Оновлювати кожну секунду
+
+        // Курси Monobank
+        fetchMonoCurrencyRates();
+        // Оновлювати курси Monobank кожні 5 хвилин (300000 мс)
+        setInterval(fetchMonoCurrencyRates, 300000); 
+    });
+</script>
+</body>
+</html>
